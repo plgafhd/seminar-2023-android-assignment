@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/userInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/userInfo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="유저 정보"
+            android:textSize="40dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/userInfo_ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="empty"
+            android:textSize="25dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/userInfo_PW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="empty"
+            android:textSize="25dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/expression"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/term1"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:hint="첫 번째 수"
+            android:textSize="25dp">
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/operator"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="+"
+            android:textSize="25dp"
+            android:gravity="center_vertical">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/term2"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:hint="두 번째 수"
+            android:textSize="25dp">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="="
+            android:textSize="25dp"
+            android:gravity="center_vertical">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="25dp"
+            android:gravity="center_vertical">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/operator_choice"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/expression"
+        android:columnCount="2"
+        android:rowCount="2">
+
+        <Button
+            android:id="@+id/operator_plus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#FF97FB97"
+            android:text="+"
+            android:textColor="#FFFFFFFF"
+            android:textSize="40dp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/operator_minus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="-"
+            android:background="#FED600"
+            android:textSize="40dp"
+            android:textColor="#FFFFFFFF">
+
+        </Button>
+
+        <Button
+            android:id="@+id/operator_mult"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:background="#FF6B6B"
+            android:text="×"
+            android:textColor="#FFFFFFFF"
+            android:textSize="40dp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/operator_div"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="÷"
+            android:background="#653397"
+            android:textSize="40dp"
+            android:textColor="#FFFFFFFF">
+
+        </Button>
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
