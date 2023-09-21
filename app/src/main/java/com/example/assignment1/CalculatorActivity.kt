@@ -23,6 +23,7 @@ class CalculatorActivity : AppCompatActivity() {
 
         val term1text:EditText=findViewById<EditText>(R.id.term1)
         val term2text:EditText=findViewById<EditText>(R.id.term2)
+
         val resulttext:TextView=findViewById<TextView>(R.id.result)
         val operatortext:TextView=findViewById<TextView>(R.id.operator)
         var term1:String
